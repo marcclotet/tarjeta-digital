@@ -5,7 +5,7 @@ from qrcode.constants import ERROR_CORRECT_H
 from PIL import Image, ImageDraw
 
 # URL pública opcional (déjala vacía si aún no publicas)
-BASE_URL = ""  # p.ej. "https://tuusuario.github.io/tarjeta-digital"
+BASE_URL = "https://marcclotet.github.io/tarjeta-digital"
 
 ROOT = os.path.dirname(__file__)
 env = Environment(loader=FileSystemLoader(os.path.join(ROOT, "templates")))
