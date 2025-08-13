@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marc Clotet — Operations Support Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<meta name="description" content="Tarjeta digital de Marc Clotet (Operations Support Specialist)">
+</head>
+<body>
+  <div class="container">
+    <div class="phone-frame">
+      <div class="topbar">
+        <span class="dot"></span><span class="time">9:38</span><span class="signal">5G</span>
+      </div>
+
+      <div class="card flat">
+        <!-- Franja superior beige -->
+        <div class="beige-top"></div>
+
+        <!-- Imagen de cabecera grande -->
+        <div class="hero">
+          <img class="hero-photo" src="../../assets/photos/marc.jpeg" alt="Foto de Marc Clotet">
+        </div>
+
+        <!-- Nombre y cargo centrados -->
+        <div class="identity">
+          <div class="name">Marc Clotet</div>
+          <div class="role">Operations Support Specialist</div>
+        </div>
+
+        <!-- Pestañas -->
+        <div class="tabs">
+          <button class="tab active" data-tab="qr">QR CODE</button>
+          <button class="tab" data-tab="info">INFO</button>
+          <button class="tab" data-tab="account">ACCOUNT</button>
+        </div>
+
+        <!-- Contenido QR -->
+        <div class="tabcontent active" id="tab-qr">
+          <img class="qr-big" src="qr.png" alt="Código QR">
+        </div>
+
+        <!-- Contenido INFO -->
+        <div class="tabcontent" id="tab-info">
+          <div class="links-grid">
+            <a href="https://www.instagram.com/voucler_official" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://x.com/vouclerofficial" target="_blank" rel="noopener">Twitter/X</a>
+            <a href="https://es.linkedin.com/company/voucler" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.voucler.com" target="_blank" rel="noopener">Web</a>
+          </div>
+        </div>
+
+        <!-- Contenido ACCOUNT -->
+        <div class="tabcontent" id="tab-account">
+          
+            <p class="muted">Añade una vCard en <code>vcard_url</code> para activarlo.</p>
+          
+        </div>
+
+        <!-- Pie con logo -->
+        <div class="footer-brand">
+          <img src="../../assets/logo.png" alt="Logo" class="brand-logo">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Tabs
+  document.querySelectorAll('.tab').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tabcontent').forEach(c=>c.classList.remove('active'));
+      btn.classList.add('active');
+      const id = 'tab-' + btn.dataset.tab;
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>

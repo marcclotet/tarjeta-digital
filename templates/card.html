@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ name }} — {{ role }}</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<meta name="description" content="Tarjeta digital de {{ name }} ({{ role }})">
+</head>
+<body>
+  <div class="container">
+    <div class="phone-frame">
+      <div class="topbar">
+        <span class="dot"></span><span class="time">9:38</span><span class="signal">5G</span>
+      </div>
+
+      <div class="card flat">
+        <!-- Franja superior beige -->
+        <div class="beige-top"></div>
+
+        <!-- Imagen de cabecera grande -->
+        <div class="hero">
+          <img class="hero-photo" src="{{ photo_src }}" alt="Foto de {{ name }}">
+        </div>
+
+        <!-- Nombre y cargo centrados -->
+        <div class="identity">
+          <div class="name">{{ name }}</div>
+          <div class="role">{{ role }}</div>
+        </div>
+
+        <!-- Pestañas -->
+        <div class="tabs">
+          <button class="tab active" data-tab="qr">QR CODE</button>
+          <button class="tab" data-tab="info">INFO</button>
+          <button class="tab" data-tab="account">ACCOUNT</button>
+        </div>
+
+        <!-- Contenido QR -->
+        <div class="tabcontent active" id="tab-qr">
+          <img class="qr-big" src="qr.png" alt="Código QR">
+        </div>
+
+        <!-- Contenido INFO -->
+        <div class="tabcontent" id="tab-info">
+          <div class="links-grid">
+            {% if instagram %}<a href="{{ instagram }}" target="_blank" rel="noopener">Instagram</a>{% endif %}
+            {% if twitter %}<a href="{{ twitter }}" target="_blank" rel="noopener">Twitter/X</a>{% endif %}
+            {% if linkedin %}<a href="{{ linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+            {% if website %}<a href="{{ website }}" target="_blank" rel="noopener">Web</a>{% endif %}
+          </div>
+        </div>
+
+        <!-- Contenido ACCOUNT -->
+        <div class="tabcontent" id="tab-account">
+          {% if vcard_url %}
+            <a class="button block" href="{{ vcard_url }}">Descargar vCard</a>
+          {% else %}
+            <p class="muted">Añade una vCard en <code>vcard_url</code> para activarlo.</p>
+          {% endif %}
+        </div>
+
+        <!-- Pie con logo -->
+        <div class="footer-brand">
+          <img src="../../assets/logo.png" alt="Logo" class="brand-logo">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Tabs
+  document.querySelectorAll('.tab').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tabcontent').forEach(c=>c.classList.remove('active'));
+      btn.classList.add('active');
+      const id = 'tab-' + btn.dataset.tab;
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
