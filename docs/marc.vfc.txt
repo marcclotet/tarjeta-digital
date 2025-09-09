@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Marc Clotet
+ORG:Voucler
+TITLE:Operations Support Specialist
+EMAIL;TYPE=work:mclotet@voucler.com
+TEL;TYPE=work:+34 609 362 629
+URL:https://www.voucler.com
+END:VCARD

@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Marcio Kaufman
+ORG:Voucler
+TITLE:Chief Executive Officer 
+EMAIL;TYPE=work:mkaufman@voucler.com
+TEL;TYPE=work:+34 629 016 880
+URL:https://www.voucler.com
+END:VCARD
