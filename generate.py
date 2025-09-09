@@ -189,7 +189,8 @@ def publish_to_docs(slugs):
         if os.path.isfile(idx):
             with open(idx, encoding="utf-8") as f:
                 html = f.read()
-            html = html.replace("../../assets/", "assets/")
+                # desde docs/<slug>/ a docs/assets/ → ../assets/
+            html = html.replace("../../assets/", "../assets/")
             with open(idx, "w", encoding="utf-8") as f:
                 f.write(html)
 
