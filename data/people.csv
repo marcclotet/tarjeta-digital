@@ -1,2 +1,3 @@
-name,role,slug,photo,instagram,twitter,linkedin,website,vcard_url
-Marc Clotet,Operations Support Specialist,marc-clotet,marc.jpeg,https://www.instagram.com/voucler_official,https://x.com/vouclerofficial,https://es.linkedin.com/company/voucler,https://www.voucler.com,
+name;role;slug;photo;instagram;twitter;linkedin;website;email;phone;vcard_url
+Marc Clotet;Operations Support Specialist;marc-clotet;marc.jpeg;https://www.instagram.com/voucler_official;https://x.com/vouclerofficial;https://es.linkedin.com/company/voucler;www.voucler.com;mclotet@voucler.com;609362629;http://marcclotet.github.io/tarjeta-digital/marc.vcf
+Marcio Monteiro Kaufman;Chief Executive Officer (CEO) ;marcio-kaufman;marcio.jpg;https://www.instagram.com/voucler_official;https://x.com/vouclerofficial;https://es.linkedin.com/company/voucler;www.voucler.com;mkaufman@voucler.com;629016880;http://marcclotet.github.io/tarjeta-digital/marcio.vfc

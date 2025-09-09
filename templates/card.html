@@ -44,13 +44,33 @@
 
         <!-- Contenido INFO -->
         <div class="tabcontent" id="tab-info">
-          <div class="links-grid">
-            {% if instagram %}<a href="{{ instagram }}" target="_blank" rel="noopener">Instagram</a>{% endif %}
-            {% if twitter %}<a href="{{ twitter }}" target="_blank" rel="noopener">Twitter/X</a>{% endif %}
-            {% if linkedin %}<a href="{{ linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
-            {% if website %}<a href="{{ website }}" target="_blank" rel="noopener">Web</a>{% endif %}
-          </div>
-        </div>
+  	<div class="links-grid">
+    {% if instagram %}<a class="icon" href="{{ instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
+      <img src="../../assets/linkslogo/instagram.png" alt="Instagram">
+    </a>{% endif %}
+
+    {% if twitter %}<a class="icon" href="{{ twitter }}" target="_blank" rel="noopener" aria-label="X (Twitter)">
+      <img src="../../assets/linkslogo/X.png" alt="X">
+    </a>{% endif %}
+
+    {% if linkedin %}<a class="icon" href="{{ linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <img src="../../assets/linkslogo/linkedin.png" alt="LinkedIn">
+    </a>{% endif %}
+
+    {% if website %}<a class="icon" href="{{ website }}" target="_blank" rel="noopener" aria-label="Web">
+      <img src="../../assets/linkslogo/voucler.png" alt="Web">
+    </a>{% endif %}
+
+    {% if email %}<a class="icon" href="mailto:{% if email %}{{ email }}{% endif %}" aria-label="Correo">
+      <img src="../../assets/linkslogo/correo.png" alt="Correo">
+    </a>{% endif %}
+
+    {% if phone %}<a class="icon" href="tel:{% if phone %}{{ phone }}{% endif %}" aria-label="Teléfono">
+      <img src="../../assets/linkslogo/telefono.png" alt="Teléfono">
+    </a>{% endif %}
+  </div>
+</div>
+
 
         <!-- Contenido ACCOUNT -->
         <div class="tabcontent" id="tab-account">
