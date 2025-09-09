@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw
 
 # ===================== Config =====================
 # Si ya tienes dominio/URL pública, rellénalo:
-BASE_URL = ""  # p.ej. "https://voucler.github.io/tarjeta-digital" o "https://cards.voucler.com"
+BASE_URL = "https://marcclotet.github.io/tarjeta-digital/"  # p.ej. "https://voucler.github.io/tarjeta-digital" o "https://cards.voucler.com"
 
 ROOT = os.path.dirname(__file__)
 TPL_DIR = os.path.join(ROOT, "templates")
